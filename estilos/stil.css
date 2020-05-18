@@ -7,6 +7,9 @@
     max-width: 1500px;
     font-size: 14px;
 }
+body {
+    background: hsl(180, 52%, 96%);
+}
 /* header */
 
 .header-fondo {
@@ -17,10 +20,15 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+@media screen and (max-width:470px){
+    .header-fondo {
+        background: url('../images/bg-header-mobile.svg');
+        background-color: hsl(180,29%,50%);
+    }
+}
 /* cuerpo */
 .cuerpo {
     max-width: 1200px;
-    background-color: gray;
     margin-left: auto;
     margin-right: auto;
     padding: 18px;
@@ -48,14 +56,36 @@
     font-family: 'Spartan';
     font-weight: 700;
     align-items: center;
+    box-shadow: 0px 1px 6px rgb(40, 75, 85);
 }
 .tag {
-    padding: 8px 6px;
+    padding: 6px 9px;
     background: hsl(180, 31%, 95%);
     display: inline-block;
+    font-weight: 700;
+    font-family: 'Spartan';
+}
+.spartan {
+    font-family: 'Spartan';
+}
+.spartan-bold {
+    font-family: 'Spartan';
+    font-weight: 700;
+}
+.spartan-light {
+    font-family: 'Spartan';
+    font-weight: 400;
 }
 .anuncio .tag {
     border-radius: 4px;
+    margin: 8px;
+    transition: all 0.5s ease-in;
+}
+
+.anuncio .tag:hover{
+    cursor:pointer;
+    background-color: hsl(180, 29%, 50%);
+    color: white;
 }
 .tag-group .tag {
     border-radius: 0;
@@ -86,4 +116,96 @@
     margin-top: 2px;
     margin-bottom: 4px;
 }
+
 /* articulos (anuncios) */
+.anuncio {
+    border-radius: 4px;
+    overflow: hidden;
+}
+.nombre-empresa {
+    transition: color 0.2s cubic-bezier(0,0,1,1);
+}
+.nombre-empresa:hover {
+    color: hsl(180, 29%, 50%);
+    cursor: pointer;
+}
+.anuncio-tags {
+    text-align: right;
+}
+.anuncio-padre-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: white;
+    align-items: center;
+    padding: 18px 14px;
+    /* si es new sera de color text-tur */
+    /* border-left: 5px solid hsl(180, 29%, 50%); */
+    border: 5px solid white;
+}
+.anuncio-separador {
+    color:hsl(180, 31%, 95%) ;
+    width: 0px;
+}
+@media screen and (max-width:706px){
+    .anuncio-padre-flex {
+        flex-direction: column;
+    }
+    .anuncio-separador {
+        width: 100%;
+        margin: 18px 0px;
+    }
+    .anuncio-cajaImgDatos {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .anuncio-tags {
+        width: 100%;
+        text-align: left;
+    }
+}
+@media screen and (max-width:470px){
+    .anuncio-cajaImgDatos {
+        /* justify-content: stretch; */
+        flex-direction: column !important;
+    }
+    .anuncio-datos>*{
+        margin: 4px 0px;
+    }
+    .anuncio-padre-flex {
+        position: relative;
+    }
+    .anuncio {
+        overflow: visible;
+    }
+    .anuncio-padre-imgEmpresa {
+        margin-bottom: 30px;
+    }
+    .anuncio-imgEmpresa {
+        width: 60px;
+        height:60px !important;
+        position: absolute;
+        top: -30px;
+        left: 20px;
+        z-index: 100;
+    }
+}
+.anuncio-cajaImgDatos {
+    display: flex;
+    flex-direction: row;
+}
+.anuncio-padre-imgEmpresa {
+    padding: 0px 4px;
+    margin-right: 20px;
+}
+.anuncio-imgEmpresa {
+    /* width: 86px; */
+    height: 100%;
+}
+.anuncio-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* 706 es donde debemos romper */
