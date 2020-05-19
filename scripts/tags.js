@@ -23,21 +23,22 @@ function agregarFiltro(listFiltros){
         menuTags.innerHTML=template;
     }
     visibleCajaFiltros(filtros);
-    mostrarAnuncios(DATOS,filtros);
+    mostrarAnuncios(DATOS,filtros,"agregar Filtros");
 }
 // para eleminar tag;
 function eliminarFiltro(filtroClose){
     let filtro=filtroClose.previousElementSibling.textContent;
     let position=filtros.findIndex(x=>x==filtro);
     filtros.splice(position,1);
-    agregarFiltro(filtros);
+    let elementoTag=filtroClose.parentElement;
+    elementoTag.parentElement.removeChild(elementoTag);
     visibleCajaFiltros(filtros);
-    mostrarAnuncios(DATOS,filtros);
+    mostrarAnuncios(DATOS,filtros, "elimnar filtros");
 }
 // limpiar filtros con clear
 function limpiarFiltros(){
     filtros.splice(0);
     agregarFiltro(filtros);
     visibleCajaFiltros(filtros);
-    mostrarAnuncios(DATOS);
+    mostrarAnuncios(DATOS,null,"limpiar");
 }

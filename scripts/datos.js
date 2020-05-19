@@ -25,14 +25,18 @@ let DATOS=[
     {empresa:"The Air Filter Company",titulo:"Fron-end Dev",tags:["frontend","junior","react","sass","javascript"],fecha:34,tiempoLaboral:"Part Time",lugar:"WorldWide",destacado:false,URLimg:"images/the-air-filter-company.svg"}
 ];
 
-
-function mostrarAnuncios(datos,arreytags){
+function mostrarAnuncios(datos,arreytags,elegido){
     let tagsfilt=arreytags;
+    if(tagsfilt!=undefined){
+      if(tagsfilt.length==0){
+        tagsfilt=false;
+      }
+    } 
     let cuerpoAnuncios=document.getElementById("cuerpoAnuncios");
     let template="";
-    let templateTags="";
+    let templateTags="";//en caso hubiera tags
     datos.forEach(anuncio => {
-      if(arreytags){
+      if(tagsfilt){
         var respuestaFiltro=filtrarTags(anuncio.tags,tagsfilt);
       }
        const todo=`<article class="anuncio">
@@ -69,7 +73,7 @@ function mostrarAnuncios(datos,arreytags){
         template+=todo;
       }
     });
-    if(arreytags){
+    if(tagsfilt){
       cuerpoAnuncios.innerHTML=templateTags;
     } else {
       cuerpoAnuncios.innerHTML=template;
