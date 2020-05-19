@@ -9,17 +9,7 @@ function visibleCajaFiltros(filt){
         caja.style.visibility="visible";
     }
 }
-let Anuncios=document.getElementById("cuerpoAnuncios");
-let tags=Anuncios.getElementsByClassName("tag");
-for (const iter of tags) {
-    iter.addEventListener("click",()=>{
-        let ele=iter.textContent.toLocaleLowerCase();
-        if(filtros.indexOf(ele)==-1){
-            filtros.push(ele);
-            agregarFiltro(filtros);
-        }
-    })
-}
+
 function agregarFiltro(listFiltros){
     let menuTags=document.getElementById("menuTags");
     if(listFiltros.length>-1){
@@ -33,6 +23,7 @@ function agregarFiltro(listFiltros){
         menuTags.innerHTML=template;
     }
     visibleCajaFiltros(filtros);
+    mostrarAnuncios(DATOS,filtros);
 }
 // para eleminar tag;
 function eliminarFiltro(filtroClose){
@@ -41,10 +32,12 @@ function eliminarFiltro(filtroClose){
     filtros.splice(position,1);
     agregarFiltro(filtros);
     visibleCajaFiltros(filtros);
+    mostrarAnuncios(DATOS,filtros);
 }
 // limpiar filtros con clear
 function limpiarFiltros(){
     filtros.splice(0);
     agregarFiltro(filtros);
     visibleCajaFiltros(filtros);
+    mostrarAnuncios(DATOS);
 }
