@@ -121,11 +121,12 @@ body {
 .anuncio {
     border-radius: 4px;
     overflow: hidden;
+    margin-bottom: 16px;
 }
-.nombre-empresa {
+.nombre-anuncio {
     transition: color 0.2s cubic-bezier(0,0,1,1);
 }
-.nombre-empresa:hover {
+.nombre-anuncio:hover {
     color: hsl(180, 29%, 50%);
     cursor: pointer;
 }
@@ -142,11 +143,30 @@ body {
     padding: 18px 14px;
     /* si es new sera de color text-tur */
     /* border-left: 5px solid hsl(180, 29%, 50%); */
-    border: 5px solid white;
+    border-left: 5px solid white;
+}
+.anuncio-padre-flex.new {
+    border-left: 5px solid hsl(180, 29%, 50%);
 }
 .anuncio-separador {
     color:hsl(180, 31%, 95%) ;
     width: 0px;
+}
+.etiqueta-algo {
+    display: inline-block;
+    padding: 3px 3px 0px;
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+}
+.etiqueta-algo.new {
+    background-color: hsl(180, 29%, 50%);
+}
+.etiqueta-algo.featured {
+    background-color: hsl(180, 14%, 20%);
+}
+.anuncio-nombre-empresa {
+    display: inline-block;
 }
 @media screen and (max-width:706px){
     .anuncio-padre-flex {
@@ -175,9 +195,11 @@ body {
     }
     .anuncio-padre-flex {
         position: relative;
+        border-radius: 4px;
     }
     .anuncio {
         overflow: visible;
+        margin-bottom: 40px;
     }
     .anuncio-padre-imgEmpresa {
         margin-bottom: 30px;

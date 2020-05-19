@@ -6,10 +6,10 @@ function cajaFiltroMargen(){
     cajaFiltro.style.top=`-${mitadCaja+18}px`;
     // añadiendo margenes para separarlo
     if(mitadCaja<18){
-        let margen=34 -(18 -mitadCaja);
+        let margen=40 -(18 -mitadCaja);
         cajaFiltro.parentElement.style.marginBottom=`${margen}px`;
     } else{
-        let margen=mitadCaja-18+34;
+        let margen=mitadCaja-18+40;
         cajaFiltro.parentElement.style.marginBottom=`${margen}px`;
     }
 }
