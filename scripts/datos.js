@@ -18,7 +18,7 @@ let DATOS=[
     {empresa:"Account",titulo:"Junior Frontend Developer",tags:["frontend","junior","react","sass","javascript"],fecha:5,tiempoLaboral:"Part Time",lugar:"USA only",destacado:false,URLimg:"images/account.svg"},
     {empresa:"MyHome",titulo:"Junior Frontend Developer",tags:["frontend","junior","css","javascript"],fecha:15,tiempoLaboral:"Part Time",lugar:"USA only",destacado:false,URLimg:"images/myhome.svg"},
     {empresa:"Loop Studios",titulo:"Software Engineer",tags:["full stack","midweight","javascript","sass","ruby"],fecha:4,tiempoLaboral:"Full Time",lugar:"WorldWide",destacado:false,URLimg:"images/loop-studios.svg"},
-    {empresa:"Falcet",titulo:"Junior Backend Developer",tags:["backend","junior","ruby","ror"],fecha:5,tiempoLaboral:"Full Time",lugar:"UK only",destacado:false,URLimg:"images/photosnap.svg"},
+    {empresa:"Faicet",titulo:"Junior Backend Developer",tags:["backend","junior","ruby","ror"],fecha:5,tiempoLaboral:"Full Time",lugar:"UK only",destacado:false,URLimg:"images/faceit.svg"},
     {empresa:"Shortly",titulo:"Junior Developer",tags:["frontend","junior","html","sass","javascript"],fecha:4,tiempoLaboral:"Full Time",lugar:"WorldWide",destacado:false,URLimg:"images/shortly.svg"},
     {empresa:"Insure",titulo:"Junior Frontend Developer",tags:["frontend","junior","vue","javascript","sass"],fecha:2,tiempoLaboral:"Full Time",lugar:"WorldWide",destacado:false,URLimg:"images/insure.svg"},
     {empresa:"Eyecam Co.",titulo:"Full Stack Enginner",tags:["fullstack","midweight","javascript","django","python"],fecha:6,tiempoLaboral:"Full Time",lugar:"WorldWide",destacado:false,URLimg:"images/eyecam-co.svg"},
